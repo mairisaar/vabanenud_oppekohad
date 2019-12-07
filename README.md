@@ -1,1 +1,2 @@
-# vabanenud_oppekohad
+# Vabanenud õppekohad
+Katsetus muuta lehe kasutajaliidest ja kasutusumugavust
