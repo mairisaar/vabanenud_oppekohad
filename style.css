@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+section {
+    width: 80vw;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+}
+a {
+    text-decoration: none;
+    color: #00A6E6;
+}
+h1, h2 {
+    color: #2C5696;
+}
+
+p {
+    font-size: 18px;
+    line-height: 145%;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.content {
+    /*margin-left: 25%;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar {
+    width: 25%;
+    height: 100vh;
+    min-width: 200px;
+    background-color: #2C5696;
+}
+
+.burger {
+	margin: 0px 5vw 0 0;
+	font-size: 26px;
+	line-height: 60px;
+	float: right;
+	display: none;
+	width: 26px;
+	color: #ffffff;
+}
+
+#toggle {
+	display: none;
+}
+
+nav {
+    margin-top: 200px;
+    }
+
+nav ul {
+    /*display: flex;
+    flex-direction: column;
+    justify-content: space-between;*/
+    padding-left: 0px;
+}
+
+nav li {
+    height: 80px;
+    border-bottom: solid 1px #ffffff;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+}
+
+nav li a{
+    color: #ffffff; 
+    font-size: 18px;
+}
+
+header {
+    height: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: burlywood;
+}
+
+.main {
+    padding-left: 16px;
+    margin-bottom: 200px;
+    background-color: lemonchiffon;
+}
+
+.heading {
+    font-size: 32px;
+    font-weight: 900;
+    padding-bottom: 36px;
+}
+
+.text p {
+    padding-bottom: 32px;
+}
+
+footer {
+    height: 100px;
+    background-color: lightcoral;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+footer p {
+    position: absolute;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 500;
+}
+
+.shape {
+    width: 300px;
+    height: 200px;
+    background-color: #2C5696;
+    z-index: -1;
+    transform: rotate(-15deg);
+}
+
+/*responsivenes*/
+
+@media screen and (max-width: 787px) {
+    
+    .shape {
+        display: none;
+    }
+
+    footer {
+        justify-content: center;
+    }
+}
