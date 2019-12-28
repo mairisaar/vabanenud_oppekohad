@@ -13,10 +13,9 @@
 <body>
     <section>
 <!--sidebar-->
-        <div class="sidebar">
-            
+        <div class="sidebar w3-sidebar w3-bar-block w3-collapse" id="mySidebar">
+            <button class="w3-bar-item w3-button w3-xlarge w3-hide-large" onclick="w3_close()">&times;</button>
             <nav>
-                
                 <ul>
                     <li><a href="">avaleht</a></li>
                     <li><a href="">bakalaureuse-, rakenduskõrgharidus- ja integreeritud õppes</a></li>
@@ -25,10 +24,11 @@
                 </ul>
             </nav>
         </div>
-<!---page content-->
+<!--page content-->
         <div class="content">
             <header>
-                <h1>Vabanenud õppekohad Tartu Ülikoolis</h1>
+                <button class="w3-button w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+                <img src="img/horisontaal.svg" alt="Tartu Ülikooli horisontaallogo">
             </header>
             <div class="main">
                 <div class="heading">
@@ -47,5 +47,15 @@
         </div>
     </section>
     
+    <script>
+        function w3_open() {
+          document.getElementById("mySidebar").style.display = "block";
+        }
+        
+        function w3_close() {
+          document.getElementById("mySidebar").style.display = "none";
+        }
+        </script>
+
 </body>
 </html>

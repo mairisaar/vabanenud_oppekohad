@@ -20,6 +20,10 @@ a {
     text-decoration: none;
     color: #00A6E6;
 }
+h1 {
+    font-weight: 700;
+}
+
 h1, h2 {
     color: #2C5696;
 }
@@ -35,7 +39,7 @@ li {
 }
 
 .content {
-    /*margin-left: 25%;*/
+    margin-left: 25vw;
     display: flex;
     flex-direction: column;
 }
@@ -47,18 +51,9 @@ li {
     background-color: #2C5696;
 }
 
-.burger {
-	margin: 0px 5vw 0 0;
-	font-size: 26px;
-	line-height: 60px;
-	float: right;
-	display: none;
-	width: 26px;
-	color: #ffffff;
-}
-
-#toggle {
-	display: none;
+.sidebar .w3-button{
+    color: #ffffff;
+    text-align: right;
 }
 
 nav {
@@ -90,13 +85,24 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: burlywood;
+}
+
+.w3-button {
+    color: #2C5696;
+}
+
+.w3-button:hover {
+    color: #00A6E6!important;
+    background-color: rgba(44,86,150,0.2)!important;
+}
+
+img {
+    padding: 8px 16px;
 }
 
 .main {
     padding-left: 16px;
     margin-bottom: 200px;
-    background-color: lemonchiffon;
 }
 
 .heading {
@@ -110,11 +116,14 @@ header {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    right: 10vw;
     height: 100px;
-    background-color: lightcoral;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-top: 100px;
 }
 
 footer p {
@@ -122,11 +131,14 @@ footer p {
     color: #ffffff;
     text-align: center;
     font-weight: 500;
+    padding-right: 16px;
 }
 
 .shape {
-    width: 300px;
-    height: 200px;
+    width: 25vw;
+    height: 25vh;
+    min-width: 300px;
+    min-height: 200px;
     background-color: #2C5696;
     z-index: -1;
     transform: rotate(-15deg);
@@ -134,13 +146,68 @@ footer p {
 
 /*responsivenes*/
 
-@media screen and (max-width: 787px) {
-    
+@media screen and (max-width: 1240px) {
+    section {
+        width: 100vw;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
     .shape {
-        display: none;
+        min-width: 400px;
+        min-height: 200px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .shape {
+        width: 60vw;
+        height: 30vh;
+        min-width: 400px;
+        min-height: 200px;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: 0;
+        width: 80vw;
+        max-width: 480px;
+    }
+
+    h1 {
+        font-size: 1em;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .content {
+        margin-left: 0;
+        position: fixed;
+        left: 0;
+        width: 100%;
+    }
+
+    .main {
+        margin-bottom: 10px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1px;
     }
 
     footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
         justify-content: center;
+        width: 100%;
+        right: 0;
+        /*background-color: #2C5696;*/
     }
 }
